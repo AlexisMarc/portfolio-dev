@@ -1,7 +1,7 @@
 import './style.css'
-import { createIcons, Code2, Download, Copy, Check } from 'lucide'
+import { createIcons, Code2, Download, Copy, Check, Play, ExternalLink } from 'lucide'
 
-createIcons({ icons: { Code2, Download, Copy, Check } })
+createIcons({ icons: { Code2, Download, Copy, Check, Play, ExternalLink } })
 
 const tabs = document.querySelectorAll('[data-tabs] .tab')
 const panels = document.querySelectorAll('[data-tabs] .term-panel')

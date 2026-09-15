@@ -674,6 +674,17 @@ strong {
   transform: translateX(3px);
 }
 
+.demo-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.demo-links .project-link {
+  margin-left: auto;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
