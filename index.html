@@ -233,6 +233,36 @@
             </div>
           </article>
 
+          <article class="project featured">
+            <div class="project-meta">
+              <div class="project-name">Finap</div>
+              <div class="project-role">Demo de arquitectura &middot; Open Cells + Lit</div>
+              <div class="project-date">PWA &middot; 2026</div>
+            </div>
+            <div class="project-body">
+              <div class="cs">
+                <div class="cs-item">
+                  <span class="cs-label">Qu&eacute; es</span>
+                  <p>SPA (<strong>PWA</strong>) de gesti&oacute;n de finanzas personales construida con <strong>Open Cells (BBVA)</strong>, <strong>Lit</strong> y <strong>Spectrum Web Components</strong>, como vitrina de buenas pr&aacute;cticas de arquitectura frontend: design system, capas desacopladas, i18n, accesibilidad, testing y offline.</p>
+                </div>
+              </div>
+              <div class="chips">
+                <span>Open Cells</span><span>LitElement</span><span>Spectrum Web Components</span><span>TypeScript</span>
+                <span>PWA</span><span>Vite</span><span>NestJS</span>
+              </div>
+              <div class="demo-links">
+                <a class="btn primary sm" href="#finap">
+                  <i data-lucide="info"></i>
+                  Ver detalle del proyecto
+                </a>
+                <a class="btn sm" href="https://finap-lake.vercel.app" target="_blank" rel="noopener">
+                  <i data-lucide="play"></i>
+                  Abrir demo
+                </a>
+              </div>
+            </div>
+          </article>
+
           <div class="projects-grid">
             <article class="project">
               <div class="project-meta">
@@ -458,5 +488,73 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="finap-modal" hidden>
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="finap-modal-title">
+        <button class="modal-close" data-close-modal aria-label="Cerrar">
+          <i data-lucide="x"></i>
+        </button>
+        <div class="modal-content">
+          <div class="modal-head">
+            <span class="modal-kicker">Proyecto destacado</span>
+            <h3 class="modal-title" id="finap-modal-title">Finap</h3>
+            <p class="modal-subtitle">Gestor de finanzas personales &middot; SPA (PWA) con Open Cells (BBVA)</p>
+          </div>
+
+          <div class="cs">
+            <div class="cs-item">
+              <span class="cs-label">Qu&eacute; hace</span>
+              <p>Finap es un gestor de finanzas personales <strong>instalable y offline</strong>: landing de producto, autenticaci&oacute;n con sesi&oacute;n persistida, dashboard (balance, estad&iacute;sticas del mes, gastos por categor&iacute;a y deudas), movimientos paginados con filtros/b&uacute;squeda/orden, CRUD de transacciones, categor&iacute;as y presupuestos con progreso, deudas con registro de pagos, an&aacute;lisis con gr&aacute;ficas (Chart.js), asistente IA, y ajustes de tema, idioma (es/en) y moneda.</p>
+            </div>
+            <div class="cs-item">
+              <span class="cs-label">Stack</span>
+              <p><strong>Open Cells (BBVA)</strong> &mdash; <code>@open-cells/core</code> &middot; <strong>Lit 3</strong> (Web Components) &middot; <strong>Spectrum Web Components (Adobe)</strong> &middot; <strong>TypeScript</strong> estricto &middot; <strong>Vite</strong> &middot; canales de Open Cells (RxJS) &middot; <strong>PWA</strong> con <code>vite-plugin-pwa</code> (Workbox) &middot; Vitest + Playwright &middot; backend <strong>NestJS + Prisma + Neon PostgreSQL</strong>.</p>
+            </div>
+            <div class="cs-item">
+              <span class="cs-label">Uso de Open Cells</span>
+              <p><code>startApp</code> con <code>mainNode</code> y <strong>rutas declarativas</strong> (<code>name</code>, <code>path</code>, <code>component</code>, <code>action</code> &rarr; import perezoso); <strong>interceptor/guard</strong> en <code>appConfig</code> que protege rutas y redirige a login; routing por <strong>history API</strong> (URLs limpias); <strong>canales (RxJS)</strong> + propiedades reactivas de Lit; y capa de datos desacoplada en <code>src/services/</code> (&uacute;nica puerta a la red).</p>
+            </div>
+            <div class="cs-item">
+              <span class="cs-label">PWA y responsividad</span>
+              <p><strong>Instalable</strong>, funciona <strong>sin conexi&oacute;n</strong> y sincroniza al reconectar (cach&eacute; + background sync). Interfaz <strong>mobile-first y responsive</strong>, validada con tests e2e (Playwright) en proyectos <strong>desktop y m&oacute;vil</strong>.</p>
+            </div>
+          </div>
+
+          <div class="chips">
+            <span>Open Cells</span><span>LitElement</span><span>Spectrum Web Components</span><span>TypeScript</span>
+            <span>PWA</span><span>Responsive</span><span>RxJS</span><span>Vite</span><span>NestJS</span>
+          </div>
+
+          <div class="cred-box">
+            <span class="cs-label">Credenciales de acceso</span>
+            <div class="cred-row">
+              <code id="cred-user">marcos@finap.app</code>
+              <code id="cred-pass">secret123</code>
+              <button class="btn sm" type="button" data-copy-cred aria-label="Copiar credenciales">
+                <i data-lucide="copy" class="copy-icon"></i>
+                <i data-lucide="check" class="check-icon"></i>
+                Copiar
+              </button>
+            </div>
+          </div>
+
+          <div class="demo-links modal-actions">
+            <a class="btn primary sm" href="https://finap-lake.vercel.app" target="_blank" rel="noopener">
+              <i data-lucide="play"></i>
+              Abrir demo
+            </a>
+            <a class="btn sm" href="https://github.com/AlexisMarc/finap" target="_blank" rel="noopener">
+              <i data-lucide="external-link"></i>
+              Frontend
+            </a>
+            <a class="btn sm" href="https://github.com/AlexisMarc/finap-service" target="_blank" rel="noopener">
+              <i data-lucide="external-link"></i>
+              Backend
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
